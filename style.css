@@ -1,0 +1,108 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #181c2b 0%, #232946 100%);
+    color: #fff;
+    font-family: 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+}
+
+#countdown {
+    display: flex;
+    gap: 40px;
+    padding: 40px 60px;
+    border-radius: 32px;
+    background: rgba(34, 40, 49, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.time-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 90px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.time-section:hover {
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.18);
+    transform: translateY(-2px) scale(1.025);
+}
+
+.time-section:hover .number {
+    color: #e0e0ff;
+    text-shadow: 0 4px 16px rgba(31,38,135,0.18);
+}
+
+.time-section:hover .label {
+    color: #e8e8ff;
+}
+
+.number {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.label {
+    font-size: 1.1rem;
+    margin-top: 2px;
+    color: #b8b8d1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.glass-title {
+    margin-bottom: 36px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 18px 48px;
+    border-radius: 24px;
+    background: rgba(34, 40, 49, 0.28);
+    box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1.2px solid rgba(255, 255, 255, 0.13);
+    text-align: center;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.glass-title:hover {
+    background: rgba(34, 40, 49, 0.38);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.28);
+    color: #e0e0ff;
+    cursor: default;
+}
+
+@media (max-width: 600px) {
+    #countdown {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px 10px;
+    }
+    .time-section {
+        min-width: 0;
+        width: 100%;
+    }
+} 
